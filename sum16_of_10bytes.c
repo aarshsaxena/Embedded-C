@@ -1,5 +1,4 @@
-// Write a program in Embedded C for 8051 microcontroller to find the 16 bit sum of 10 bytes of data starting from memory location 3000H to 3009H and store the 16 bit sum at 3010H & 3011H.
-
+// Q14. Write a program in Embedded C for 8051 microcontroller to find the 16 bit sum of 10 bytes of data starting from memory location 3000H to 3009H and store the 16 bit sum at 3010H & 3011H.
 
 #include<reg52.h>
 xdata unsigned char a _at_ 0x3000;
