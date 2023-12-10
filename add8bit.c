@@ -4,7 +4,7 @@
 #include<reg52.h>
 xdata unsigned char a _at_ 0x2000;
 xdata unsigned char b _at_ 0x2001;
-xdata unsigned char c _at_ 0x2002;
+xdata unsigned int c _at_ 0x2002;
 
 void main()
 {
