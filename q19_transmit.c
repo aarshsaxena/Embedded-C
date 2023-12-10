@@ -6,8 +6,8 @@ TMOD=0x20;
 TH1=TL1=0xE8;
 TR1=1;
 SCON=0x40;
-SBUF=0x54;
+here: SBUF=0x54;
 while(TI==0);
 TI=0;
-here: goto here;
+goto here;
 }
