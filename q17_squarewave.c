@@ -12,14 +12,24 @@ void isr_mode2() interrupt 1
 wave=~wave;
 TF0=0;
 }
+/*void isr_mode1() interrupt 1
+{
+wave=~wave;
+TF0=0;TR0=0;
+TH0=0xFF;
+TL0==xCE;
+TR0=1;
+}
+*/
 
 
 //main program
 void main()
-{	TMOD=0x01;
+{	//TMOD=0x01; mode 1
+	TMOD=0x02;
 	SP=0x07;
-//	TH0=0xFE;
-//	TL0=0x0C;
+//	TH0=0xFF;
+//	TL0=0xCE;
 	TH0=TL0=0xCE;
 	wave=0;
 	IE=0x82;
