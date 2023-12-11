@@ -65,5 +65,5 @@ void main;
 	
 	IE=0x81;
 	TCON=0x01;
-	here: goto here;
+	again: goto again;
 }
