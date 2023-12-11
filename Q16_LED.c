@@ -4,13 +4,19 @@
 xdata unsigned char i _at_ 0x2000;
 xdata unsigned char codes[10]= {0xF9, 0xA4, 0xB0, 0x99, 0x82, 0xF8, 0x80, 0x90, 0xC0};
 
+//delay is of 500Mhz equal to 5x10^5 microsecond 
 void delay(){
 	TMOD=0x01;
-	TH0=0xEC;
-	TL0=0x78;
+	TH0=0x3C;
+	TL0=0xBO;
 	TR0=1;
-	if (TF0==1);
-	TF0=0;
+	for(int count=0;count<=9;i++){
+		TH0=0x3C;
+		TL0=0xBO;
+		TR0=1;
+		while(TF0==0);
+		TF0=0;
+	}
 }
 
 void main()
